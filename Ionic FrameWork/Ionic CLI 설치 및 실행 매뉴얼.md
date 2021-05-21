@@ -156,13 +156,13 @@ $ ng add @ionic/angular
 - 터미널에 접속하여 아래의 명령어를 실행한다. 
 
 ```bash
-// myApp 위치에는 본인이 원하는 App이름을, blank 위치에는 3가지 템플릿 중 본인이 원하는 템플릿 명을 써주면 된다.
-// --type은 angular, react, ionic-angular, ionic1 중에 선택하면 된다.
+# myApp 위치에는 본인이 원하는 App이름을, blank 위치에는 3가지 템플릿 중 본인이 원하는 템플릿 명을 써주면 된다.
+# --type은 angular, react, ionic-angular, ionic1 중에 선택하면 된다.
 
 $ ionic start myApp blank --type=angular --capacitor 
 ```
 
-> => ionic start 관련하여 더 많은 정보를 얻고 싶을 경우 ([정보얻기](https://ionicframework.com/docs/cli/commands/st))
+> => ionic start 관련하여 더 많은 정보를 얻고 싶을 경우 ([정보얻기](https://ionicframework.com/docs/developing/starting))
 >
 > => cordova를 사용해도 되지만 이 설치 매뉴얼에서는 capacitor를 사용해서 생성 할 것이다.
 
