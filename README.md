@@ -14,4 +14,4 @@
 
 ## JavaScript
 
-- [비동기 흐름 ](https://github.com/sejong77/Today-Learn/blob/Master/JavaScript/%EB%B9%84%EB%8F%99%EA%B8%B0%20%EC%B2%98%EB%A6%AC%EB%B0%A9%EC%8B%9D.md)
+- [비동기 처리방식](https://github.com/sejong77/Today-Learn/blob/Master/JavaScript/%EB%B9%84%EB%8F%99%EA%B8%B0%20%EC%B2%98%EB%A6%AC%EB%B0%A9%EC%8B%9D.md)
