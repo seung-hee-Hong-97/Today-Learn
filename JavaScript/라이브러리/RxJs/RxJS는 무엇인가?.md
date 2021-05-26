@@ -72,7 +72,7 @@ import { map, filter, scan, tap } from 'rxjs/operators';
 
 
 
-`Observer` 는 Observable을 구독하여 방출한 노티피케이션(Notification)을 전달받아 사용하는 객체를 뜻한다.
+`Observer` 는 Observable을 구독하여 방출한 Notification(알림)을 전달받아 사용하는 객체를 뜻한다.
 
 즉 Observable은 연속성을 가지는 데이터를 스트리밍하고, Observer는 연속적으로 보내진 데이터를 받아서 처리를 한다.
 
@@ -101,23 +101,23 @@ Observable 구독자에게 에러를 전달한다. 이후에 next 및 complete �
 
 Observable.create((ob) => {
   try {
-    // next 노티피케이션 방출
+    // next 알림(Notification) 방출
     ob.next('one');
   } catch(e) {
-    // error 노티피케이션 방출
+    // error 알림(Notification) 방출
     ob.error(e);
   } finally {
-    // complete 노티피케이션 방출
+    // complete 알림(Notification) 방출
     ob.complete();
   }
 }).subscribe(
-  // Observable이 방출한 next 노티피케이션에 반응하는 next 메서드
+  // Observable이 방출한 next 알림(Notification)에 반응하는 next 메서드
   (x) => console.log(x);
   
-  // Observable이 방출한 error 노티피케이션에 반응하는 error 메서드
+  // Observable이 방출한 error 알림(Notification)에 반응하는 error 메서드
   (err) => console.log(err);
 
-	// Observable이 방출한 complete 노티피케이션에 반응하는 complete 메서드
+	// Observable이 방출한 complete 알림(Notification)에 반응하는 complete 메서드
   () => console.log('complete');
 )
 ```
@@ -128,11 +128,11 @@ Observable.create((ob) => {
 
 ---
 
-| Observer 메서드 | 설명                                                         | 노티피케이션(Notification) 내용 |
-| --------------- | ------------------------------------------------------------ | ------------------------------- |
-| next()          | Observable이 방출한 next 타입의 노티피케이션에 반응하는 콜백 함수 | 값 또는 이벤트                  |
-| error()         | Observable이 방출한 error 타입의 노티피케이션에 반응하는 콜백 함수 | 에러 객체                       |
-| complete()      | Observable이 방출한 complete 타입의 노티피케이션에 반응하는 콜백 함수 | 없음                            |
+| Observer 메서드 | 설명                                                         | 알림(Notification)내용 |
+| --------------- | ------------------------------------------------------------ | ---------------------- |
+| next()          | Observable이 방출한 next 타입의 알림(Notification)에 반응하는 콜백 함수 | 값 또는 이벤트         |
+| error()         | Observable이 방출한 error 타입의 알림(Notification)에 반응하는 콜백 함수 | 에러 객체              |
+| complete()      | Observable이 방출한 complete 타입의 알림(Notification)에 반응하는 콜백 함수 | 없음                   |
 
 
 
