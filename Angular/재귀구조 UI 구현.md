@@ -125,7 +125,7 @@ nodes = [
 
 
 
-<img src="http://192.168.1.157/asdfg/icoopintern/-/raw/master/images/tree-data.png" width="350">
+<img src="https://github.com/sejong77/Today-Learn/blob/Master/image/tree-data.png?raw=true" width="350">
 
 
 
