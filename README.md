@@ -25,6 +25,7 @@
 - [[매뉴얼]재귀구조 UI 구현](https://github.com/sejong77/Today-Learn/blob/Master/Angular/%EC%9E%AC%EA%B7%80%EA%B5%AC%EC%A1%B0%20UI%20%EA%B5%AC%ED%98%84.md)
 - [[매뉴얼]가상 스크롤 구현](https://github.com/sejong77/Today-Learn/blob/Master/Angular/Virtual-Scroll%20%EA%B5%AC%ED%98%84%20%EB%A7%A4%EB%89%B4%EC%96%BC.md)
 - [라이프싸이클 후킹 함수](https://github.com/sejong77/Today-Learn/blob/Master/Angular/%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4%ED%95%A8%EC%88%98.md)
+- [컴포넌트 간 데이터 통신](https://github.com/sejong77/Today-Learn/blob/Master/Angular/Component%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%86%B5%EC%8B%A0.md)
 
 
 
