@@ -85,7 +85,7 @@ providers: [
 
 이 경우엔 `AuthInterceptor` 서비스를 등록한 후에 `LoggingInterceptor` 서비스를 등록하면 됩니다. 그러면 외부로 향하는 요청이 `AuthInterceptor` 를 거친 후에 `LoggingInterceptor` 로 전달됩니다. 돌아오는 응답은 반대로 `LoggingInterceptor` 를 거쳐 `AuthInterceptor` 로 전달됩니다.
 
-<img src="https://raw.githubusercontent.com/sejong77/Today-Learn/635ad6e866dd3c74bc0f8ca65c740620bde91690/image/interceptor-order.svg">
+<img src="https://angular.kr/generated/images/guide/http/interceptor-order.svg">
 
 > 인터셉터를 등록한 후에는 실행 순서를 변경하거나 특정 인터셉터를 건너뛸 수는 없습니다.
 >
