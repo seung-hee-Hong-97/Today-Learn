@@ -28,6 +28,8 @@
 - [컴포넌트 간 데이터 통신](https://github.com/sejong77/Today-Learn/blob/Master/Angular/Component%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%86%B5%EC%8B%A0.md)
 - [파이프로 데이터 표시형식 변환](https://github.com/sejong77/Today-Learn/blob/Master/Angular/%ED%8C%8C%EC%9D%B4%ED%94%84%EB%A1%9C%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%91%9C%EC%8B%9C%ED%98%95%EC%8B%9D%20%EB%B3%80%ED%99%98.md)
 - [의존성 주입](https://github.com/sejong77/Today-Learn/blob/Master/Angular/%EC%9D%98%EC%A1%B4%EC%84%B1%20%EC%A3%BC%EC%9E%85.md)
+- [백엔드와 HTTP 통신](https://github.com/sejong77/Today-Learn/blob/Master/Angular/%EB%B0%B1%EC%97%94%EB%93%9C%EC%99%80%20HTTP%20%ED%86%B5%EC%8B%A0.md)
+- [HTTP 인터셉터](https://github.com/sejong77/Today-Learn/blob/Master/Angular/HTTP%20%EC%9D%B8%ED%84%B0%EC%85%89%ED%84%B0.md)
 
 ## JavaScript
 
