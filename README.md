@@ -43,7 +43,7 @@
 
 ## Kotlin
 
-- [개발 환경 구축](https://github.com/sejong77/Today-Learn/blob/Master/Kotlin/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95.md)
+- [개발 환경 구축](https://github.com/sejong77/Today-Learn/blob/Master/Kotlin/%5B01%5D%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95.md)
 
 ## Capacitor
 
