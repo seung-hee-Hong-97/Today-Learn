@@ -35,6 +35,7 @@
 
 - [비동기 처리방식](https://github.com/sejong77/Today-Learn/blob/Master/JavaScript/%EB%B9%84%EB%8F%99%EA%B8%B0%20%EC%B2%98%EB%A6%AC%EB%B0%A9%EC%8B%9D.md)
 - [호이스팅](https://github.com/sejong77/Today-Learn/blob/Master/JavaScript/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85.md)
+- [클로저](https://github.com/sejong77/Today-Learn/blob/Master/JavaScript/%ED%81%B4%EB%A1%9C%EC%A0%80.md)
 
 ## RxJS
 
