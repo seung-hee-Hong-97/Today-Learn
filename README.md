@@ -36,6 +36,7 @@
 ## React
 
 - [React 설치 및 개발환경 구축](https://github.com/sejong77/Today-Learn/blob/Master/React/React%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95.md)
+- [React 라이프 싸이클](https://github.com/sejong77/Today-Learn/blob/Master/React/React%20%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8B%B8%EC%9D%B4%ED%81%B4.md)
 
 
 
