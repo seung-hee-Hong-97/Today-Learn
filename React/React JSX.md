@@ -12,7 +12,7 @@
 >
 > Javascript 컴파일로서, 현재 및 이전 브라우저 환경에서 ES5+ 코드를 이전 버전의 Javascript로 변환하는데 주로 사용되는 도구 체인입니다.
 
-``` react
+``` javascript
 // JSX를 사용한 경우 (Javascript 코드 안에 HTML 코드처럼 사용할 수 있습니다.)
 function App() {
   return (
