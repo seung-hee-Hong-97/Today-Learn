@@ -41,7 +41,7 @@ function App() {
 
 이유는 `Virtual DOM(가상돔)`에서 컴포넌트 변화를 감지할 때 효율적으로 비교할 수 있도록 컴포넌트 내부는 하나의 DOM 트리구조로 이루어져야 한다는 규칙이 있기 때문입니다.
 
-``` react
+``` javascript
 // 에러 케이스
 function App() {
   return (
@@ -94,7 +94,7 @@ export default App;
 - JSX 내부에서도 Javascript 표현식을 사용할 수 있습니다. JSX 내부에서 `{ }` 중괄호로 감싸주면 됩니다.
 - 유효한 모든 Javascript 표현식을 넣을 수 있습니다.
 
-``` react
+``` javascript
 function App() {
   const name = "Hong";
   return (
@@ -115,7 +115,7 @@ export default App;
 - JSX 내부의 Javascript 표현식에는 if문, for문을 사용할 수 없습니다.
 - 따라서 조건에 따른 내용을 렌더링해야 하는 경우, JSX밖에서 조건문을 사용하여 미리 값을 설정하거나, `{ }` 내부에 삼항 연산자를 사용하면 됩니다.
 
-``` react
+``` javascript
 // 1. JSX 외부에서 조건 설정
 function App() {
   let result = '';
@@ -179,7 +179,7 @@ function App() {
 
 React 컴포넌트에서는 함수의 return 값이 undefined일 경우 렌더딩 할 때 오류를 발생시킵니다.
 
-``` react
+``` javascript
 function App() {
   const name = 'undefined';
   return name;
@@ -197,7 +197,7 @@ Or, to render nothing, return null
 
 혹시라도 어떠한 값이 undefined일 수 있다면 `or 연산자` 를 통해 해당 값이 undefined일 경우 사용할 값을 지정하여 오류를 사전에 방지할 수 있습니다.
 
-``` react
+``` javascript
 // 1. JSX 사용하지 않고 undefined 렌더링
 function App() {
   const name = 'undefined';
@@ -216,7 +216,7 @@ function App() {
 
 ### 5. React DOM에서 Property 선언은 camelCase를 사용
 
-``` react
+``` javascript
 // 1. JSX 스타일링
 function App() {
   // css Style을 작성할 때도 camelCase 사용
@@ -241,7 +241,7 @@ function App() {
 
 JSX 내부에서 주석을 사용할 경우 `{/* ~~~ */}`와 같은 형식을 사용합니다.
 
-``` react
+``` javascript
 function App() {
   return (
     <>
