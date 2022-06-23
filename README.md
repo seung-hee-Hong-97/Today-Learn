@@ -69,4 +69,5 @@
 
 - [include와 require는 무엇인가?](https://github.com/sejong77/Today-Learn/blob/Master/PHP/include%EC%99%80%20require.md)
 - [Mac에서 라라벨 설치 매뉴얼](https://github.com/sejong77/Today-Learn/blob/Master/PHP/Mac%EC%97%90%20laravel%20%EC%84%A4%EC%B9%98.md)
+- [Laravel 라우팅](https://github.com/sejong77/Today-Learn/blob/Master/PHP/Laravel%20%EB%9D%BC%EC%9A%B0%ED%8C%85.md)
 
