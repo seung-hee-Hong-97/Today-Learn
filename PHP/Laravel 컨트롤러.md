@@ -116,15 +116,15 @@ $ php artisan route:list
 
 ### 리스트
 
-| Method       | URI               | Name          | Action  |
-| ------------ | ----------------- | ------------- | ------- |
-| GET \| HEAD  | tasks             | tasks.index   | index   |
-| POST         | tasks             | tasks.store   | store   |
-| GET \| HEAD  | tasks/create      | tasks.create  | create  |
-| GET \| HEAD  | tasks/{task}      | tasks.show    | show    |
-| PUT \| PATCH | tasks/{task}      | tasks.update  | update  |
-| DELETE       | tasks/{task}      | tasks.destroy | destroy |
-| GET \| HEAD  | tasks/{task}/edit | tasks.edit    | edit    |
+| Method       | URI               | Name          | Action                                       |
+| ------------ | ----------------- | ------------- | -------------------------------------------- |
+| GET \| HEAD  | tasks             | tasks.index   | index<br>리소스 목록 반환                    |
+| POST         | tasks             | tasks.store   | store <br>리소스 생성 처리                   |
+| GET \| HEAD  | tasks/create      | tasks.create  | create <br>리소스 생성을 위한 폼 페이지 출력 |
+| GET \| HEAD  | tasks/{task}      | tasks.show    | show <br>리소스 조회 페이지 출력             |
+| PUT \| PATCH | tasks/{task}      | tasks.update  | update <br>리소스 수정 처리                  |
+| DELETE       | tasks/{task}      | tasks.destroy | destroy <br>리소스 삭제                      |
+| GET \| HEAD  | tasks/{task}/edit | tasks.edit    | edit <br>리소스 수정을 위한 수정 페이지 출력 |
 
 > `Name` : Route의 이름
 >
