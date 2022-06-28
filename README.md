@@ -39,6 +39,7 @@
 - [React 라이프 싸이클](https://github.com/sejong77/Today-Learn/blob/Master/React/React%20%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8B%B8%EC%9D%B4%ED%81%B4.md)
 - [React JSX](https://github.com/sejong77/Today-Learn/blob/Master/React/React%20JSX.md)
 - [React Memo](https://github.com/sejong77/Today-Learn/blob/Master/React/React%20Memo.md)
+- [React PropTypes](https://github.com/sejong77/Today-Learn/blob/Master/React/React%20PropTypes.md)
 
 
 
