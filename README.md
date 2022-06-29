@@ -73,4 +73,5 @@
 - [Mac에서 라라벨 설치 매뉴얼](https://github.com/sejong77/Today-Learn/blob/Master/PHP/Mac%EC%97%90%20laravel%20%EC%84%A4%EC%B9%98.md)
 - [Laravel 라우팅](https://github.com/sejong77/Today-Learn/blob/Master/PHP/Laravel%20%EB%9D%BC%EC%9A%B0%ED%8C%85.md)
 - [Laravel 컨트롤러](https://github.com/sejong77/Today-Learn/blob/Master/PHP/Laravel%20%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC.md)
+- [Laravel Request와 상호작용](https://github.com/sejong77/Today-Learn/blob/Master/PHP/Laravel%20Request%EC%99%80%20%EC%83%81%ED%98%B8%EC%9E%91%EC%9A%A9.md)
 
