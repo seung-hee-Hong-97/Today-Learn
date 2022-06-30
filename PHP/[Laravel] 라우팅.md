@@ -1,4 +1,4 @@
-# Laravel 기본적인 Routing
+# [Laravel] 기본적인 Routing
 
 기본적인 Laravel Route는 URI와 클로저로 정의할 수 있으며, 복잡한 Routing 설정 파일 없이도 Routing을 정의하고 쉽게 이해 할 수 있는 방법을 제공합니다.
 

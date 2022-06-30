@@ -1,4 +1,4 @@
-# Laravel Request와 상호작용
+# [Laravel] Request와 상호작용
 
 
 
@@ -192,3 +192,4 @@ $preferred = $request->prefers(['text/html', 'application/json']);
 ```
 
 > 주어진 Content 유형 중에서 어떠한 것도 Request에 의해 수락되지 않으면 null을 반환함
+

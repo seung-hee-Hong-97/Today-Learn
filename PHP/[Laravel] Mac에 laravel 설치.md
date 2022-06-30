@@ -1,4 +1,4 @@
-# Mac에 laravel 설치
+# [Laravel] Mac에 laravel 설치
 
 2022년 6월 기준 라라벨의 가장 최신 버전은 9.X 입니다.
 

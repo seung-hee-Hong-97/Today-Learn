@@ -1,4 +1,4 @@
-# Laravel 컨트롤러
+# [Laravel] 컨트롤러
 
 컨트롤러는 라라벨의 MVC(Model-View-Controller)에서 C에 해당합니다.
 
