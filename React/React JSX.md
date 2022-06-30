@@ -1,4 +1,4 @@
-# JSX
+# [React] JSX
 
 `JSX`는 Javascript에 XML을 추가한 확장 문법입니다.
 

@@ -1,4 +1,4 @@
-# React PropTypes
+# [React] PropTypes
 
 React는 기본적으로 Javascript를 사용하는데, 이는 유연한 특성 때문에 작성이 편하지만, 파일이 많아지면 생산성이 떨어지고 타입에 대한 엄격함이 떨어져 버그를 잡기 힘든 점이 있습니다.
 

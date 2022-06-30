@@ -1,4 +1,4 @@
-# React Memo
+# [React] Memo
 
 React는 먼저 컴포넌트를 렌더링 한 후에 이전 렌더링된 결고와 비교하여 DOM 업데이트를 결정합니다.
 
