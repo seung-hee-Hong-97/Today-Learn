@@ -6,15 +6,7 @@
 
 - [Ionic CLI 설치 과정](https://github.com/sejong77/Today-Learn/blob/Master/Ionic%20FrameWork/Ionic%20CLI%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EC%8B%A4%ED%96%89%20%EB%A7%A4%EB%89%B4%EC%96%BC.md)
 
-
-
 - [Camera기능 구현 과정](https://github.com/sejong77/Today-Learn/blob/Master/Ionic%20FrameWork/ionic%2C%20angular%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Camera%20%EB%A7%8C%EB%93%A4%EA%B8%B0(%EA%B5%AC%ED%98%84%EC%88%9C%EC%84%9C).md) 
-
-
-
-- [Naver Map API V3 권한 승인 및 사용법](https://github.com/sejong77/Today-Learn/blob/Master/Ionic%20FrameWork/%EB%A7%A4%EC%9E%A5%EC%B0%BE%EA%B8%B0%2C%20%EB%A7%A4%EC%9E%A5%20%EC%83%81%EC%84%B8%EB%B3%B4%EA%B8%B0%20%EB%A7%A4%EB%89%B4%EC%96%BC%20.md)
-
-
 
 - [Lottie-Animation 적용 방법](https://github.com/sejong77/Today-Learn/blob/Master/Ionic%20FrameWork/Lottie-Animation%20%EA%B5%AC%ED%98%84%20%EB%A7%A4%EB%89%B4%EC%96%BC.md)
 
@@ -76,4 +68,5 @@
 - [[Laravel] 컨트롤러](https://github.com/sejong77/Today-Learn/blob/Master/PHP/%5BLaravel%5D%20%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC.md)
 - [[Laravel] Request와 상호작용](https://github.com/sejong77/Today-Learn/blob/Master/PHP/%5BLaravel%5D%20Request%EC%99%80%20%EC%83%81%ED%98%B8%EC%9E%91%EC%9A%A9.md)
 - [[Laravel] Request - 입력](https://github.com/sejong77/Today-Learn/blob/Master/PHP/%5BLaravel%5D%20Request%20-%20%EC%9E%85%EB%A0%A5.md)
+- [[Laravel] Response 생성](https://github.com/sejong77/Today-Learn/blob/Master/PHP/%5BLaravel%5D%20Response%20%EC%83%9D%EC%84%B1.md)
 
