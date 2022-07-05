@@ -71,4 +71,5 @@
 - [[Laravel] Request - 입력](https://github.com/sejong77/Today-Learn/blob/Master/PHP/%5BLaravel%5D%20Request%20-%20%EC%9E%85%EB%A0%A5.md)
 - [[Laravel] Response 생성](https://github.com/sejong77/Today-Learn/blob/Master/PHP/%5BLaravel%5D%20Response%20%EC%83%9D%EC%84%B1.md)
 - [[Laravel] Response 리다이렉트](https://github.com/sejong77/Today-Learn/blob/Master/PHP/%5BLaravel%5D%20Response%20%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8.md)
+- [[Laravel] Response 타입](https://github.com/sejong77/Today-Learn/blob/Master/PHP/%5BLaravel%5D%20Response%20%ED%83%80%EC%9E%85.md)
 
