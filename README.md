@@ -36,6 +36,7 @@
 - [[React] axios](https://github.com/sejong77/Today-Learn/blob/Master/React/%5BReact%5D%20axios.md)
 - [[React] react-cookie](https://github.com/sejong77/Today-Learn/blob/Master/React/%5BReact%5D%20react-cookie.md)
 - [[React] JWT 로그인](https://github.com/sejong77/Today-Learn/blob/Master/React/%5BReact%5D%20JWT%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.md)
+- [[React] Redux](https://github.com/sejong77/Today-Learn/blob/Master/React/%5BReact%5D%20Redux.md)
 
 
 
