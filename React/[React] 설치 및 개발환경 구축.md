@@ -73,7 +73,7 @@ npm 5.2.0 버전부터 추가된 node.js 패키지를 실행시키는 하나의 
 
 npx는 npm을 통해 모듈을 로컬에 설치했어야만 실행시킬 수 있었던 기존 문제점을 해결해주었습니다. 모듈을 로컬에 저장하지 않고, 매번 최신 버전의 파일만을 임시로 불러와 실행 시킨 후에, 다시 그 파일은 없어지는 방식을 사용하기 때문에 더 효율적입니다.
 
-### npm 사용하여 설치
+### npm 사용하여 React 설치
 
 ``` bash
 $ npm install -g create-react-app
@@ -84,14 +84,73 @@ $ sudo npm install -g create-react-app
 
 > npm에게 Global하게 사용할 수 있도록 react를 설치해달라는 명령어
 
-### npx 사용하여 설치 (권장)
+### npx 설치
 
 ``` bash
-# 1. npx 설치
 $ sudo npm install npx -g
+```
 
-# 2. react 설치
-$ npx create-react-app
+
+
+### React 설치
+
+npx를 통해 React를 설치 할 때 Javascript 기반으로 설치하는 것과 Typescript를 기반으로 설치하는 방법이 있습니다.
+
+``` bash
+# 1. Javascript 기반으로 React 설치
+$ npx create-react-app [폴더명]
+
+# 2. Typescript 기반으로 React 설치
+$ npx create-react-app [폴더명] -template typescript
+$ npm install typescript
+```
+
+
+
+### React + Typescript 기반 프로젝트 세팅
+
+``` bash
+# tsconfig 생성
+$ npx tsc --init
+```
+
+```json
+// tsconfig.json
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"target": "es2016",
+		"typeRoots": ["./node_modules/@types", "./types"],
+		"jsx": "react-jsx",
+		"module": "esnext",
+		"sourceMap": true,
+		"removeComments": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"strictNullChecks": false,
+		"skipLibCheck": true,
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"noFallthroughCasesInSwitch": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true
+	},
+	"include": ["./src/"],
+	"exclude": ["node_modules/*"]
+}
+```
+
+``` bash
+# @types 설치
+
+$ npm install @types/react
+$ npm install @types/react-dom
+$ npm install @types/node
+$ npm install @types/jest
 ```
 
 
