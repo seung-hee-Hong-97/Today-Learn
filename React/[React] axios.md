@@ -171,7 +171,7 @@ API 연동 실습을 위한 테스트 데이터 URL
 
 `https://jsonplaceholder.typicode.com/users`
 
-```javascript
+```jsx
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 

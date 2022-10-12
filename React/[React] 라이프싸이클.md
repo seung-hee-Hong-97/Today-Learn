@@ -107,7 +107,7 @@ React Hook은 함수형 Component에서 클래스형 Component의 기능을 구�
 
 `useEffect`는 컴포넌트 안에서 불러내어 state 변수나 props에 접근이 가능하고, 첫번째 렌더링과 이후의 모든 업데이트에서 수행됩니다. 두번째 인자로 조건을 걸어 첫번째 렌더링이나 특정한 조건일 때만 수행되도록 하는 것도 가능합니다.
 
-``` javascript
+``` jsx
 import React, { useState, useEffect } from 'react';
 
  export const App = () => {
@@ -162,7 +162,7 @@ useEffect(() => {
 
 마지막으로 `componentWillUnmount` 를 살펴보겠습니다.
 
-``` javascript
+``` jsx
 import React, { useState, useEffect } from 'react';
 
 export const App = () => {

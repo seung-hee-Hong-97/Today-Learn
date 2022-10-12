@@ -86,7 +86,7 @@ $ npm install redux react-redux
 
 ### `2. Provider로 감싸기`
 
-``` javascript
+``` jsx
 /* src/index.js */
 
 import React from 'react';
@@ -184,7 +184,7 @@ export default rootReducer;
 
 ### `5. 컨테이너 생성`
 
-``` javascript
+``` jsx
 /* src/Containers/CouterContainer.js */
 
 import React from 'react';
@@ -218,7 +218,7 @@ export default CounterContainer;
 
 
 
-```javascript
+```jsx
 /* src/Containers/CounterContainer2.js */
 
 import React from 'react';
@@ -244,7 +244,7 @@ export default CounterContainer2;
 
 ### `6. 화면에 보여줄 컴포넌트 생성`
 
-``` javascript
+``` jsx
 /* src/components/Counter.js */
 
 import React from 'react';
@@ -264,7 +264,7 @@ export default Counter;
 
 
 
-```javascript
+```jsx
 /* src/components/Counter2.js */
 
 import React, {useState} from 'react';
@@ -296,7 +296,7 @@ export default Counter2;
 
 ### `7. App에 컨테이너 추가`
 
-``` javascript
+``` jsx
 import React from 'react';
 import CounterContainer from './Container/CounterContainer';
 import CounterContainer2 from './Container/CounterContainer2';

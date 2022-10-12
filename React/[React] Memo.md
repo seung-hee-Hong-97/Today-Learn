@@ -8,7 +8,7 @@ React는 먼저 컴포넌트를 렌더링 한 후에 이전 렌더링된 결고�
 
 ### 사용 예시
 
-``` javascript
+``` jsx
 import React from 'react';
 
 export function Movie({title, releaseDate}) {
@@ -38,7 +38,7 @@ React.memo(movie)는 새롭게 메모이징된 컴퍼넌트인 memoizedMovie를 
 
 Memo를 사용하기 가장 좋은 경우는 함수형 컴포넌트가 같은 props로 자주 렌더링 되는 경우에 사용하면 좋습니다.
 
-``` javascript
+``` jsx
 // 위에 작성된 Movie 컴포넌트를 사용하여 부모 컴포넌트인 MovieViewsRealTime 컴포넌트 작성
 
 function MovieViewsRealTime({title, releaseDate, views}) {
@@ -53,7 +53,7 @@ function MovieViewsRealTime({title, releaseDate, views}) {
 
 > 이 컴포넌트 코드는 주기적으로 서버에서 데이터를 폴링해서 `MovieViewsRealtime` 컴포넌트의 `views` 를 업데이트 합니다.
 
-```javascript
+```jsx
 // 초기 렌더링
 <MovieViewsRealTime views={0} title="Hello, World" releaseDate="2022.06.24" />
 
@@ -70,7 +70,7 @@ function MovieViewsRealTime({title, releaseDate, views}) {
 
 ### 메모이제이션 적용 코드
 
-``` javascript
+``` jsx
 import React from 'react';
 
 function MovieViewsRealTime({title, releaseDate, views}) {

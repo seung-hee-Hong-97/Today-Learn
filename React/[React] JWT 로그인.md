@@ -18,7 +18,7 @@
 - `accessToken` : JSON payload로 전달 받습니다.
 
 > - `Secure` : 웹 브라우저와 웹 서버가 https로 동신하는 경우에만 웹 브라우저가 쿠키를 서버로 전송하는 옵션
-> - `HttpOnly` : Javascript의 document.cookie를 이용해서 쿠키에 접속하는 것을 막는 옵션
+> - `HttpOnly`c: Javascript의 document.cookie를 이용해서 쿠키에 접속하는 것을 막는 옵션
 
 
 

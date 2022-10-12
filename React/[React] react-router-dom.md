@@ -36,7 +36,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 위와 같이 모듈을 추가시켜준 뒤에 다음과 같은 형식으로 작성합니다.
 
-``` javascript
+``` jsx
 function App() {
   return (
     <BrowserRouter>
@@ -68,7 +68,7 @@ export default App;
 
 ### 기존의 V5까지의 방식
 
-``` javascript
+``` jsx
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Home } from './routes/Home';
 import { Detail } from './routes/Detail';
@@ -95,7 +95,7 @@ export default App;
 
 ### V6 방식
 
-``` javascript
+``` jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './routes/Home';
 import { Detail } from './routes/Detail';
@@ -133,7 +133,7 @@ React Router에서는 `<a>` 태그를 사용하지 않고, `<Link>` 컴포넌트
 
 `Home` 화면에서 `About` 화면으로 이동하는 기능을 `Link` 컴포넌트를 사용해서 구현해보겠습니다.
 
-``` javascript
+``` jsx
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -163,7 +163,7 @@ URL 파라미터의 이름으로는 Route를 설정할 때 `Route` 컴포넌트�
 
 ### URL 파라미터 설정
 
-``` javascript
+``` jsx
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -182,7 +182,7 @@ export default Home;
 
 ### URL 파라미터 받기
 
-``` javascript
+``` jsx
 import { useParams } from 'react-router-dom';
 
 function About() {
@@ -206,7 +206,7 @@ export default About;
 
 쿼리스트링을 사용할 때는 URL 파라미터와 다르게 `Route` 컴포넌트를 사용할 때 별도로 설정해야 되는 것은 없습니다.
 
-``` javascript
+``` jsx
 import { useLocation } from 'react-router-dom';
 
 function About() {
@@ -248,7 +248,7 @@ http://localhost:3000/about?detail=true&mode=1
 
 이렇게 되면 `?` 와 `&` 을 기준으로 문자열을 분리한 뒤 key와 value를 파싱하는 작업을 해야하는데, React Router V6부터는 `useSearchParams` 라는 Hook을 이용하여 쉽게 파싱할 수 있습니다.
 
-``` javascript
+``` jsx
 import { useSearchParams } from 'react-router-dom';
 
 function About() {
@@ -290,7 +290,7 @@ export default About;
 
 `useNavigate` Hook은 `Link` 컴포넌트를 사용하지 않고, 다른 페이지로 이동해야 할 때 사용합니다.
 
-``` javascript
+``` jsx
 import { useNavigate } from 'react-router-dom';
 
 function Layout() {
