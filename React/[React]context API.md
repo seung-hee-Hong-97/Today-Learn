@@ -17,7 +17,7 @@
 - Context의 이름은 본인 마음대로 정하고, 하위에서 import로 받아오기 위해 export를 시킵니다.
 - `{props.children}` 컴포넌트 태그 사이에 내용을 보여주는 props가 children 입니다.
 
-``` javascript
+``` jsx
 /* Store.js */
 
 import React, { createContext, useState } from 'react';
@@ -52,7 +52,7 @@ export default Store;
 - `Context API`의 데이터에 접근해야 하는 하위 컴포넌트를 return 내부에서 Provider로 래핑
 - 전달할 데이터는 `value = { }` 안에 겍체 형태로 넣음
 
-``` javascript
+``` jsx
 /* App.js */
 
 import React from 'react';
@@ -83,7 +83,7 @@ export default App;
 - 설정했던 context를 import
 - `useContext`를 사용하여 value 값을 가져옴
 
-``` javascript
+``` jsx
 /* Start.js */
 
 import React, { useContext } from 'react';
