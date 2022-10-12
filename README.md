@@ -38,6 +38,7 @@
 - [[React] JWT 로그인](https://github.com/sejong77/Today-Learn/blob/Master/React/%5BReact%5D%20JWT%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.md)
 - [[React] Redux](https://github.com/sejong77/Today-Learn/blob/Master/React/%5BReact%5D%20Redux.md)
 - [[React] Context API](https://github.com/sejong77/Today-Learn/blob/Master/React/%5BReact%5Dcontext%20API.md)
+- [[React] Craco를 통한 절대경로 설정](https://github.com/sejong77/Today-Learn/blob/Master/React/%5BReact%5D%20Craco%EB%A5%BC%20%ED%86%B5%ED%95%9C%20%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C%20%EC%84%A4%EC%A0%95.md)
 
 
 
