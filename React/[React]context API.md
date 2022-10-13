@@ -2,47 +2,49 @@
 
 컴포넌트들이 많아지면 여러 레벨을 거쳐 최상위 컴포넌트에서 `props`로 원하는 상태와 함수를 전달 하였지만, 이렇게 되면 `props` 가 필요하지 않은 컴포넌트들도 하위 컴포넌트에 값을 전달하기 위해 어쩔 수 없이 `props` 를 받아야 하는 경우가 생깁니다.
 
-따라서 `Context API`를 통하여 한번에 원하는 값을 전달하는 방법을 다루겠습니다.
+`Context API`를 사용하게 되면 하위 컴포넌트로 Props를 전달하지 않고, 전역적으로 값을 전달할 수 있게 됩니다.
 
 `Context API` 뿐만 아니라, `Redux` 및 `Mobx`와 같은 상태 관리 라이브러리를 사용할 수도 있지만 복잡하기 때문에 학습 난이도가 높습니다.
 
 
 
-## Context API 사용법
+## Context API 사용법 예시 
 
 ### `1. createContext() 함수를 사용하여 Context 생성`
 
-- `src` 디렉토리 하위에 `contexts` 디렉토리를 생성하고 그 안에 Store 파일을 만들거나, 최상위 컴포넌트에 바로 입력해도 상관 없음
+- `src` 디렉토리 하위에 `contexts` 디렉토리를 생성하고 하위에 `UserContext.tsx` , `UserContextProvider.tsx` 파일 생성
 
-- Context의 이름은 본인 마음대로 정하고, 하위에서 import로 받아오기 위해 export를 시킵니다.
-- `{props.children}` 컴포넌트 태그 사이에 내용을 보여주는 props가 children 입니다.
+``` typescript
+/* UserContext.tsx */
 
-``` jsx
-/* Store.js */
+import { createContext } from 'react';
 
-import React, { createContext, useState } from 'react';
-
-export const NameContext = createContext({
-  name: '', // 기본 값 설정
-  handleChange: () => { } // 함수도 전달 가능
+const UserContext = createContext({
+  loggedIn: false,
+  setLoggedInHandler: (isLogin: boolean) => {}
 });
 
-const Store = (props) => {
-  const [name, setName] = useState('');
-  let [i, setI] = useState(0);
-  
-  const handleChange = () => {
-    // Code...
-  };
+export default UserContext;
+```
+
+```jsx
+/* UserContextProvider.tsx */
+
+import { useState } from 'react';
+import UserContext from './UserContext';
+
+const UserContextProvider = ({ children }: { children: React.ReactNode }) => {
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
+  const setLoggedInHandler = (isLogin: boolean) => setLoggedIn(isLogin);
   
   return (
-    <NameContext.Provider value={{ name, handleChange }}>
-      { props.children }
-    </NameContext.Provider>
+    <UserContext.Provider value={{ loggedIn, setLoggedInHandler }}>
+      {children} 
+    </UserContext.Provider>
   );
 };
 
-export default Store;
+export default UserContextProvider;
 ```
 
 
@@ -53,52 +55,163 @@ export default Store;
 - 전달할 데이터는 `value = { }` 안에 겍체 형태로 넣음
 
 ``` jsx
-/* App.js */
+/* App.tsx */
 
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Store from './Store/Store';
+import Home from '@pages/Home';
+import Login from '@pages/Login';
 
 const App = () => {
   return (
-    <Store>
-      <BrowserRouter>
-        <NameContext.Provider value={{ name: 'kim', handleChange }}>
-          <Route path='/start' element={<Start />} />
-          <Route path='/Main' element={<Main />} />
-          <Route path='/Result' element={<Result />} />
-        </NameContext.Provider>
-      </BrowserRouter>
-    </Store>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 };
 
 export default App;
 ```
 
+``` jsx
+/* Home.tsx */
+
+import UserContextProvider from '@contexts/User/UserContextProvider';
+import Main from '@pages/Main';
+
+const Home = () => {
+  return (
+    <UserContextProvider>
+      <Main/>
+    </UserContextProvider>
+  );
+};
+
+export default Home;
+```
+
 
 
 ### `3. 하위 컴포넌트에서 context API 설정`
 
-- 설정했던 context를 import
-- `useContext`를 사용하여 value 값을 가져옴
+- 위에 설정했던 `UserContext`를 Import 하여 사용
+- `useContext` hook을 사용하여 value 값을 가져옴
 
 ``` jsx
-/* Start.js */
+/* Login.tsx */
 
-import React, { useContext } from 'react';
-import { NameContext } from './App.js';
+import React, { useContext, useState } from 'react';
+import UserContext from '@contexts/User/UserContext';
 
-const start = () => {
-  const { name, handleChange } = useContext(NameContext);
+const Login = () => {
+  const [id, setId] = useState<string>('');
+  const [pwd, setPwd] = useState<string>('');
+  const {loggedIn, setLoggedInHandler } = useContext(UserContext);
+  
+  const onLogin = () => {
+    // 로그인 성공 시
+    setLoggedInHandler(true);
+  };
   
   return (
-    <div>
-      <span onClick={handleChange}>{name}님 안녕하세요. </span>
-    </div>
+    <>
+      <form onSubmit={(e: React.FormEvent) => {
+        e.preventDefault();
+        onLogin();
+        }}
+      >
+        <input type="text" value={id} onChange={(e: React.ChangeEvent<HTMLInputElement>) =>  
+          setId(e.target.value)} />
+        <input type="password" value={pwd} onChange={(e: React.ChangeEvent<HTMLInputElement) =>
+         setPwd(e.target.value)} />
+      
+        <button>로그인</button>
+      </form>
+      
+      {loggedIn && <div>로그인 완료</div>}
   );
 };
 
-export default Start;
+export default Login;
 ```
 
+> 로그인에 성공했을 시, `setLoggedInHandler`를 통해 `loggedIn` 값을 true로 설정하여, `로그인 완료` 라는 문구가 보여지도록 하는 코드입니다.
+
+
+
+## 여러 Context를 병합하여 사용
+
+React 프로젝트를 진행할 때, 전역적으로 값을 공유해야 하는게 많아질 경우 `Context`를 여러 개 등록해야 하는 경우가 생깁니다.
+
+Context API는 Provider를 래핑하는 방식으로 구현되는데, 여러 Provider를 계속 래핑 하다 보면 코드의 가독성도 좋지 않게 되고 적용하는 위치도 애매해 질 수 있습니다.
+
+따라서 적용되는 모든 Provider를 병합하여 하나의 Provider로 설정하게 되면 래필도 딱 한번만 해주면 되고 앞서 언급한 단점들을 상쇄시킬 수 있습니다.
+
+
+
+### 적용 예시
+
+1. `AppProviderProps` 인터페이스 생성
+
+``` typescript
+/* interfaces/common.ts */
+
+export interface AppProviderProps {
+  contexts: Array<React.JSXElementConstructor<React.PropsWithChildren<any>>>;
+  children: React.ReactNode;
+}
+```
+
+> - `contexts` : 병합할 Context들
+> - `children` : 하위 컴포넌트
+
+
+
+2. `AppProvider.tsx` 파일 생성
+
+```jsx
+/* AppProvider.tsx */
+
+import { AppProviderProps } from '@interfaces/common';
+
+const AppProvider = ({ contexts, children }: AppProviderProps) => {
+  return (
+    <>
+      {contexts.reduce((prev, Context) => {
+        return <Context>{prev}</Context>;
+      }, children)}
+    </>
+  );
+};
+
+export default AppProvider;
+```
+
+
+
+3. 최상위 컴포넌트에 AppProvider.tsx 파일 래핑
+
+``` jsx
+/* Home.tsx */
+
+import AppProvider from '@contexts/Appprovider';
+import ModalProvider from '@contexts/Modal/ModalProvider';
+import UserContextProvider from '@contexts/User/UserContextProvider';
+
+import Main from './Main';
+
+const Home = () => {
+  return (
+    <AppProvider
+      contexts={[UserContextProvider, ModalProvider]}
+    >
+      <Main />
+    </AppProvider>
+  )
+}
+```
+
+> 위의 코드처럼 Provider를 추가할 때 마다 래핑하지 않고,  `contexts`에 배열의 요소로 추가하여 사용할 수 있게 됐습니다.
