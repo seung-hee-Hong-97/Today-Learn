@@ -101,8 +101,7 @@ npx를 통해 React를 설치 할 때 Javascript 기반으로 설치하는 것�
 $ npx create-react-app [폴더명]
 
 # 2. Typescript 기반으로 React 설치
-$ npx create-react-app [폴더명] -template typescript
-$ npm install typescript
+$ npx create-react-app [폴더명] --typescript
 ```
 
 
@@ -145,12 +144,9 @@ $ npx tsc --init
 ```
 
 ``` bash
-# @types 설치
+# Typescript 의존성 추가
 
-$ npm install @types/react
-$ npm install @types/react-dom
-$ npm install @types/node
-$ npm install @types/jest
+$ npm install typescript @types/react @types/react-dom @types/node @types/jest -D
 ```
 
 
