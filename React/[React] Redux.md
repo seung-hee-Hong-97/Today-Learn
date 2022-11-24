@@ -20,7 +20,7 @@ Redux(리덕스)란 Javascript 상태관리 라아브러리 입니다.
 
 - 변경은 순수함수로만 가능
 - Reducer와 연관되는 개념
-- Stop(스토어) - Action(액션) - Reducer(리듀서)
+- Store(스토어) - Action(액션) - Reducer(리듀서)
 
 
 
