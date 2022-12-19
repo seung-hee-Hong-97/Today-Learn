@@ -82,3 +82,4 @@
 ## Git
 
 - [커밋 메세지](https://github.com/sejong77/Today-Learn/blob/Master/Git/%EC%BB%A4%EB%B0%8B%20%EB%A9%94%EC%84%B8%EC%A7%80.md)
+- [브랜치 전략](https://github.com/sejong77/Today-Learn/blob/Master/Git/%EB%B8%8C%EB%9E%9C%EC%B9%98.md)
