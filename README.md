@@ -83,6 +83,7 @@
 
 - [커밋 메세지](https://github.com/sejong77/Today-Learn/blob/Master/Git/%EC%BB%A4%EB%B0%8B%20%EB%A9%94%EC%84%B8%EC%A7%80.md)
 - [브랜치 전략](https://github.com/sejong77/Today-Learn/blob/Master/Git/%EB%B8%8C%EB%9E%9C%EC%B9%98.md)
+- [GIF 파일 생성 및 적용](https://github.com/sejong77/Today-Learn/blob/Master/Git/GIF%20%ED%8C%8C%EC%9D%BC%20%EC%83%9D%EC%84%B1%20%EB%B0%8F%20%EC%A0%81%EC%9A%A9.md)
 
 ## Dart
 
