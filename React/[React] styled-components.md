@@ -29,7 +29,7 @@ $ npm install styled-components
 
 사용하려는 Component에 직접 `Import` 하여 사용합니다.
 
-1. 기본적인 사용 방법
+**1. 기본적인 사용 방법**
 
 ``` jsx
 import styled from 'styled-components';
@@ -52,7 +52,7 @@ const App = () => {
 
 
 
-2. 응용 방법
+**2. 응용 방법**
 
 ``` jsx
 /* Detail.jsx */
@@ -98,7 +98,7 @@ const Detail = (props) => {
 
 
 
-3. 생성한 styled-components 재사용
+**3. 생성한 styled-components 재사용**
 
 ``` jsx
 import styled from 'styled-components';
@@ -134,11 +134,12 @@ const App = () => {
 
 
 
-4. Mixin Css Props
+**4. Mixin Css Props**
 
 ```jsx
 import styled, { css } from 'styled-components';
 
+// styled-components의 css를 활용하여 공통적으로 사용할 스타일링을 정의할 수 있습니다.
 const FlexCenter = css`
   display: flex;
   justify-content: center;
@@ -158,11 +159,11 @@ const Circle = (radius, stroke = '10') => css`
 `;
 ```
 
-> styled-component는 자주 사용하는 Css를 관리 하기 위해 css props를 사용합니다.
+> styled-component는 자주 사용하는 CSS를 관리 하기 위해 `css props`를 사용합니다.
 
 
 
-5. 전역 스타일 적용
+**5. 전역 스타일 적용**
 
 Component 단위로 스타일을 작성하게 되면 전역 스타일을 적용하는 법에 대해 숙지해야 합니다.
 
@@ -262,3 +263,27 @@ const Container = styled.div`
 
 
 
+## MUI와 styled-components 함께 사용하기
+
+[MUI](https://mui.com/)를 styled-components에서도 사용할 수 있습니다.
+
+기본적으로 MUI를 사용하기 위한 환경 설정은 전부 되어 있다고 가정하겠습니다.
+
+``` jsx
+// MUI의 아이콘 중 CheckBox 아이콘을 styled-components와 함께 사용하는 예제
+
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+
+const CheckBox = styled(CheckBoxIcon)`
+	font-size: 18px;
+	color: gray;
+	
+	&:hover {
+	  cursor: pointer;
+	}
+	
+	// ... 스타일링
+`;
+```
+
+> `styled(사용할 MUI 아이콘)` 을 통해 함께 사용할 수 있습니다.
