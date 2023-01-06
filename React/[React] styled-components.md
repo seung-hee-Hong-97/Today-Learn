@@ -269,10 +269,22 @@ const Container = styled.div`
 
 기본적으로 MUI를 사용하기 위한 환경 설정은 전부 되어 있다고 가정하겠습니다.
 
-``` jsx
-// MUI의 아이콘 중 CheckBox 아이콘을 styled-components와 함께 사용하는 예제
+MUI를 styled-components와 함께 사용하려면 `<StyledEngineProvider injectFirst>` 로 적용하려는 컴포넌트를 래핑 해줘야 styled-components 문법을 사용할 수 있으며, override 되어 자유롭게 사용할 수 있습니다.
 
+``` jsx
+// 사용 예제
+
+import { StyledEngineProvider } from '@mui/material';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
+
+const Component = () => {
+  return (
+    <StyledEngineProvider injectFirst>
+      체크박스: <CheckBox />
+    </StyledEngineProvider>
+  )
+}
+
 
 const CheckBox = styled(CheckBoxIcon)`
 	font-size: 18px;
@@ -284,6 +296,30 @@ const CheckBox = styled(CheckBoxIcon)`
 	
 	// ... 스타일링
 `;
+
+export default Component;
 ```
 
 > `styled(사용할 MUI 아이콘)` 을 통해 함께 사용할 수 있습니다.
+
+위의 방식대로 하면 MUI를 styled-components 문법을 사용하여 적용할 수 있습니다.
+
+하지만 이대로 적용하면 `<StyledEngineProvider>` 로 감싼 컴포넌트에만 MUI를 styled-components 문법으로 적용할 수 있기 때문에 전역적으로 사용하려면 최상단 컴포넌트를 감싸줘야 합니다.
+
+통상적으로 최상단 컴포넌트는 `index.jsx` 입니다.
+
+``` jsx
+// index.jsx
+
+import ReactDOM from 'react-dom/client';
+import { StyledEngineProvider } from '@mui/material';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <StyledEngineProvider injectFirst>
+    <App />
+  </StyledEngineProvider>
+);
+```
+
