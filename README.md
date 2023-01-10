@@ -99,3 +99,4 @@
 
 - [생성자(Constructor)](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%EC%83%9D%EC%84%B1%EC%9E%90(constructor).md)
 - [상속(Inheritance)](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%EC%83%81%EC%86%8D(inheritance).md)
+- [인터페이스, 제네릭(Interface, Generic)](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Interface%2C%20Generic.md)
