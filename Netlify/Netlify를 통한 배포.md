@@ -16,7 +16,9 @@ Netlify를 활용하여 React 프로젝트를 배포하는 방법을 알아보�
 
 버튼을 클릭하셨다면 본인이 원하는 플랫폼을 선택하여 로그인을 진행해주세요.
 
-<img src="https://user-images.githubusercontent.com/68320595/211260892-cd1c6aba-7819-4cbe-885c-2f857112c06d.png" align="left" />
+<img src="https://user-images.githubusercontent.com/68320595/211260892-cd1c6aba-7819-4cbe-885c-2f857112c06d.png" />
+
+
 
 저는 GitHub를 선택하여 진행 했습니다. 본인이 원하는 플랫폼을 사용하면 되기 때문에 굳이 GitHub를 선택 할 필요는 없습니다.
 
