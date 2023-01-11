@@ -87,7 +87,7 @@
 
 ## Dart
 
-### Dart 기본 문법
+### 기본 문법
 
 - [변수](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B8%B0%EB%B3%B8%EA%B8%B0/1.%20%EB%B3%80%EC%88%98.md)
 - [Null](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B8%B0%EB%B3%B8%EA%B8%B0/2.%20null.md)
@@ -95,8 +95,14 @@
 - [연산자(Operator)](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B8%B0%EB%B3%B8%EA%B8%B0/4.%20Operator.md)
 - [List, Map, Set](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B8%B0%EB%B3%B8%EA%B8%B0/5.%20List%2C%20Map%2C%20Set.md)
 
-### Dart OOP
+### OOP
 
 - [생성자(Constructor)](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%EC%83%9D%EC%84%B1%EC%9E%90(constructor).md)
 - [상속(Inheritance)](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%EC%83%81%EC%86%8D(inheritance).md)
 - [인터페이스, 제네릭(Interface, Generic)](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Interface%2C%20Generic.md)
+- [static 키워드](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Static%20%ED%82%A4%EC%9B%8C%EB%93%9C.md)
+
+### Functional Programming
+
+- [형 변환](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%ED%98%95%EB%B3%80%ED%99%98.md)
+- [List, Map, Set](https://github.com/sejong77/Today-Learn/blob/Master/Dart/Dart%EC%96%B8%EC%96%B4%20%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/List%2C%20Map%2C%20Set.md)
