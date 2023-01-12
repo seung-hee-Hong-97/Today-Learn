@@ -205,3 +205,37 @@ void main() {
 위의 코드를 살펴보면 `words` 라는 String 타입의 List가 있는데, `fold 메서드의 generic 타입을 int` 로 선언하여 반환하는 타입을 int로 변경 했습니다.
 
 따라서 각 요소의 길이를 모두 더해 반환하는 기능을 구현할 수 있습니다.
+
+<br/>
+
+## Cascading Operator
+
+`Cascading Operator` 는 `...` 을 앞에 붙여서 사용할 수 있습니다.
+
+``` dart
+// 사용 예제
+
+void main() {
+  List<int> even = [2, 4, 6, 8];
+  List<int> odd = [1, 3, 5, 7];
+  
+  // Cascading Operator 사용
+  print([...even, ...odd]);
+  print(even);
+  print([...even]);
+  print(even == [...even]);
+}
+
+/* 실행 결과
+  [2, 4, 6, 8, 1, 3, 5, 7]
+  [2, 4, 6, 8]
+  [2, 4, 6, 8]
+  false
+*/
+```
+
+> Cascading Operator를 사용하면 완전히 새로운 리스트에 값을 풀어 넣을 수 있습니다.
+>
+> 위의 코드를 예시로 들면 even이라는 int 타입의 리스트 요소들을 완전히 새로운 리스트에 값을 풀어서 생성하였기에
+>
+> even == [...even] 을 했을 경우 false가 출력되는 것을 확인 할 수 있습니다.
