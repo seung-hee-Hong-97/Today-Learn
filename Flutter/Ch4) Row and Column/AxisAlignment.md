@@ -41,21 +41,19 @@ Row(
 
 ### Column
 
-**start**                     **end**                       **center**                  **spaceBetween**       **spaceEvenly**         **spaceAround**
+**start**<img src="https://user-images.githubusercontent.com/68320595/212813113-be6f6fcd-bd6c-4de3-a490-a379860dba59.png" width="100" />    **end**  <img src="https://user-images.githubusercontent.com/68320595/212813128-84a81e52-59fc-4c2c-bf4b-2648444a07d1.png" width="100" />    **center**  <img src="https://user-images.githubusercontent.com/68320595/212813143-19be7ffd-6a33-4048-9131-c95d1dba833f.png" width="100" />      **spaceBetween**<img src="https://user-images.githubusercontent.com/68320595/212813154-07771ef2-1e2f-48e7-a294-5337394b9339.png" width="100" />          
 
-<img src="https://user-images.githubusercontent.com/68320595/212813113-be6f6fcd-bd6c-4de3-a490-a379860dba59.png" width="100" />      <img src="https://user-images.githubusercontent.com/68320595/212813128-84a81e52-59fc-4c2c-bf4b-2648444a07d1.png" width="100" />      <img src="https://user-images.githubusercontent.com/68320595/212813143-19be7ffd-6a33-4048-9131-c95d1dba833f.png" width="100" />        <img src="https://user-images.githubusercontent.com/68320595/212813154-07771ef2-1e2f-48e7-a294-5337394b9339.png" width="100" />          <img src="https://user-images.githubusercontent.com/68320595/212813161-d0fc27a6-6a52-4b49-a9bb-5438039b0b9e.png" width="100" />        <img src="https://user-images.githubusercontent.com/68320595/212813170-8c994a73-bc19-44f4-81b0-525fc643c110.png" width="100" />
+**spaceEvenly**<img src="https://user-images.githubusercontent.com/68320595/212813161-d0fc27a6-6a52-4b49-a9bb-5438039b0b9e.png" width="100" />        **spaceAround**<img src="https://user-images.githubusercontent.com/68320595/212813170-8c994a73-bc19-44f4-81b0-525fc643c110.png" width="100" />
 
 <br />
 
 ### Row
 
-**start**                                        **end**                                        **center**                                    **spaceBetween**
+**start** <img src="https://user-images.githubusercontent.com/68320595/212814376-50d6cf9f-ae19-42ea-aed6-cb1ae8967d47.png" width="200" />  **end** <img src="https://user-images.githubusercontent.com/68320595/212814388-34be720c-c10e-421b-8f54-22325ebbe81a.png" width="200" />  **center** <img src="https://user-images.githubusercontent.com/68320595/212814393-460596cf-8474-48ba-9166-3c897670e73a.png" width="200" />
 
-<img src="https://user-images.githubusercontent.com/68320595/212814376-50d6cf9f-ae19-42ea-aed6-cb1ae8967d47.png" width="200" />  <img src="https://user-images.githubusercontent.com/68320595/212814388-34be720c-c10e-421b-8f54-22325ebbe81a.png" width="200" />  <img src="https://user-images.githubusercontent.com/68320595/212814393-460596cf-8474-48ba-9166-3c897670e73a.png" width="200" />  <img src="https://user-images.githubusercontent.com/68320595/212814406-ee040d3d-0580-426c-97fa-e6a4e483c837.png" width="200" />
+**spaceBetween** <img src="https://user-images.githubusercontent.com/68320595/212814406-ee040d3d-0580-426c-97fa-e6a4e483c837.png" width="200" />	**spaceEvenly** <img src="https://user-images.githubusercontent.com/68320595/212814412-dccbbcb2-e8b3-40e8-9c2f-f0bd5bca6285.png" width="200"/>  
 
-**spaceEvenly**                              **spaceAround**
-
-<img src="https://user-images.githubusercontent.com/68320595/212814412-dccbbcb2-e8b3-40e8-9c2f-f0bd5bca6285.png" width="200"/>      <img src="https://user-images.githubusercontent.com/68320595/212814421-68d02b69-561b-4cf1-8f3a-56f352c56429.png" width="200"/>
+**spaceAround** <img src="https://user-images.githubusercontent.com/68320595/212814421-68d02b69-561b-4cf1-8f3a-56f352c56429.png" width="200"/>
 
 <br />
 
@@ -93,17 +91,13 @@ Row(
 
 ### Column
 
-**start**                                 **end**                                   **center**                               **stretch**
-
-<img src="https://user-images.githubusercontent.com/68320595/212815364-f8ded97c-ab7e-4765-a0f0-25a68d84c31c.png" width="150" />       <img src="https://user-images.githubusercontent.com/68320595/212815374-e74b5fbf-2dea-466e-9529-c418758baad1.png" width="150"/>        <img src="https://user-images.githubusercontent.com/68320595/212815384-ad7bd6cb-955e-45b8-b0aa-89f1fefbe5d1.png" width="150"/>        <img src="https://user-images.githubusercontent.com/68320595/212815393-e29e6d29-3dfe-4229-bd2e-7aab97633d32.png" width="150"/>
+**start** <img src="https://user-images.githubusercontent.com/68320595/212815364-f8ded97c-ab7e-4765-a0f0-25a68d84c31c.png" width="150" />   **end** <img src="https://user-images.githubusercontent.com/68320595/212815374-e74b5fbf-2dea-466e-9529-c418758baad1.png" width="150"/>    **center** <img src="https://user-images.githubusercontent.com/68320595/212815384-ad7bd6cb-955e-45b8-b0aa-89f1fefbe5d1.png" width="150"/>    **stretch** <img src="https://user-images.githubusercontent.com/68320595/212815393-e29e6d29-3dfe-4229-bd2e-7aab97633d32.png" width="150"/>
 
 <br />
 
 ### Row
 
-**start** 						**end**							**center**						**stretch**
-
-<img src="https://user-images.githubusercontent.com/68320595/212815873-da286c09-6eb7-468e-bb10-b84f07b8f8af.png" height="200" width="100" />		<img src="https://user-images.githubusercontent.com/68320595/212815879-b2ab3aa9-599a-4b6d-9a8e-1cab62883956.png" height="200" width="100" />			<img src="https://user-images.githubusercontent.com/68320595/212815891-b2c77536-db5c-4a61-9c1f-307cf3374597.png" height="200" width="100" />			<img src="https://user-images.githubusercontent.com/68320595/212815901-5b68e772-0c8a-4f68-9a55-6fc78d9ede34.png" height="200" width="100" />     
+**start** <img src="https://user-images.githubusercontent.com/68320595/212815873-da286c09-6eb7-468e-bb10-b84f07b8f8af.png" height="200" width="100" />	**end** <img src="https://user-images.githubusercontent.com/68320595/212815879-b2ab3aa9-599a-4b6d-9a8e-1cab62883956.png" height="200" width="100" />  **center** <img src="https://user-images.githubusercontent.com/68320595/212815891-b2c77536-db5c-4a61-9c1f-307cf3374597.png" height="200" width="100" />     **stretch** <img src="https://user-images.githubusercontent.com/68320595/212815901-5b68e772-0c8a-4f68-9a55-6fc78d9ede34.png" height="200" width="100" />     
 
 <br />
 
