@@ -101,9 +101,9 @@ Row(
 
 ### Row
 
-**start**                              **end**                                **center**                             **stretch**
+**start** 						**end**							**center**						**stretch**
 
-<img src="https://user-images.githubusercontent.com/68320595/212815873-da286c09-6eb7-468e-bb10-b84f07b8f8af.png" height="200" width="100" />               <img src="https://user-images.githubusercontent.com/68320595/212815879-b2ab3aa9-599a-4b6d-9a8e-1cab62883956.png" height="200" width="100" />                <img src="https://user-images.githubusercontent.com/68320595/212815891-b2c77536-db5c-4a61-9c1f-307cf3374597.png" height="200" width="100" />                  <img src="https://user-images.githubusercontent.com/68320595/212815901-5b68e772-0c8a-4f68-9a55-6fc78d9ede34.png" height="200" width="100" />     
+<img src="https://user-images.githubusercontent.com/68320595/212815873-da286c09-6eb7-468e-bb10-b84f07b8f8af.png" height="200" width="100" />		<img src="https://user-images.githubusercontent.com/68320595/212815879-b2ab3aa9-599a-4b6d-9a8e-1cab62883956.png" height="200" width="100" />			<img src="https://user-images.githubusercontent.com/68320595/212815891-b2c77536-db5c-4a61-9c1f-307cf3374597.png" height="200" width="100" />			<img src="https://user-images.githubusercontent.com/68320595/212815901-5b68e772-0c8a-4f68-9a55-6fc78d9ede34.png" height="200" width="100" />     
 
 <br />
 
