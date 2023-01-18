@@ -24,12 +24,12 @@
 
 ```
   <key>NSAppTransportSecurity</key>
-	<dict>
-	    <key>NSAllowsLocalNetworking</key>
-	    <true/>
-	    <key>NSAllowsArbitraryLoadsInWebContent</key>
-	    <true/>
-	</dict>
+  <dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+    <key>NSAllwsArbitraryLoadsInWebContent</key>
+    <true/>
+  </dict>
 </dict>  -> 이거 바로 위에 작성하면 됨
 </plist>
 ```
