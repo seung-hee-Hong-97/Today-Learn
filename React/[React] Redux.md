@@ -313,3 +313,8 @@ const App = () => {
 export default App;
 ```
 
+<br />
+
+### 리덕스 강의
+
+[![미리보기](https://user-images.githubusercontent.com/68320595/213066573-deff54dc-7d68-4221-ba4a-fa03b4c73aab.png)](https://www.youtube.com/watch?v=yjuwpf7VH74)
