@@ -27,7 +27,7 @@
   <dict>
     <key>NSAllowsLocalNetworking</key>
     <true/>
-    <key>NSAllwsArbitraryLoadsInWebContent</key>
+    <key>NSAllowsArbitraryLoadsInWebContent</key>
     <true/>
   </dict>
 </dict>  -> 이거 바로 위에 작성하면 됨
