@@ -150,7 +150,7 @@ class HomeScreen extends StatelessWidget {
 >
 > `IconButton` : onPressed (이벤트 실행할 함수), icon(아이콘 위젯) -> 2개의 필수 값을 넣어줘야 함
 
-<img src="https://user-images.githubusercontent.com/68320595/213082410-0dc138ce-f485-4f51-8be3-cada6d3d922c.mov" height="400" />
+<img src="https://user-images.githubusercontent.com/68320595/213086362-83b31cb5-63d9-4d2d-9981-f1b706f53d85.gif" height="400" />
 
 <br />
 
