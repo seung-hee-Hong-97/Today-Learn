@@ -1,6 +1,6 @@
 # 기초 위젯
 
-Flutter에는 많은 Widget 들이 많지만 가장 많이 사용되는 4가지의 Widget을 알아 보겠습니다.
+Flutter에는 많은 Widget 들이 많지만 가장 많이 사용되는 UI를 구성하는 4가지의 Widget을 알아 보겠습니다.
 
 <br/>
 
