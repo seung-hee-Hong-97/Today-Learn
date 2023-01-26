@@ -8,6 +8,31 @@ Stack 위젯은 자식 요소들을 층층이 쌓을 때 사용합니다.
 
 <br />
 
+## Stack 위젯의 속성
+
+- `alignment` : `AlignmentDirectional.정렬값` 형태로 사용하며 stack의 쌓이는 정렬을 설정
+
+  - AlignmentDirectional의 속성으로는 (topStart, topCenter, topEnd, center, centerStart, centerEnd, bottomStart, bottomEnd, bottomCenter)
+
+  <br />
+
+- `textDecoration` : ltr (왼 -> 오) 또는 rtl (오 -> 왼 )에서 텍스트를 배치
+
+<br />
+
+- `fit` : `StackFit.값` 형태로 사용하며 위치가 지정되지 않은 자식이 스택에 맞게 크기를 조정하는 방식을 결정
+
+  - loose : 하위 위젯 크기를 작게 설정
+  - expand : 하위 위젯의 크기를 최대한 확장
+  - passthrough : 상위 위젯 위치에 따라 상대 위치에 자식 위젯 설정
+
+  <br />
+
+- `clipBehavior` : `Clip.값` 형태로 사용하며 콘텐츠를 클리핑할지 여부를 결정합니다.
+  - none, hardEdge, antiAlias, antiAliasWithSaveLayer가 값으로 있다.
+
+<br />
+
 ## 사용 예시
 
 ``` dart
@@ -52,29 +77,6 @@ class StackScreen extends StatelessWidget {
   }
 }
 ```
-
->### Stack 위젯의 속성
->
->- `alignment` : `AlignmentDirectional.정렬값` 형태로 사용하며 stack의 쌓이는 정렬을 설정
->
->  - AlignmentDirectional의 속성으로는 (topStart, topCenter, topEnd, center, centerStart, centerEnd, bottomStart, bottomEnd, bottomCenter)
->
->  
->
->- `textDecoration` : ltr (왼 -> 오) 또는 rtl (오 -> 왼 )에서 텍스트를 배치
->
->
->
->- `fit` : `StackFit.값` 형태로 사용하며 위치가 지정되지 않은 자식이 스택에 맞게 크기를 조정하는 방식을 결정
->
->  - loose : 하위 위젯 크기를 작게 설정
->  - expand : 하위 위젯의 크기를 최대한 확장
->  - passthrough : 상위 위젯 위치에 따라 상대 위치에 자식 위젯 설정
->
->  
->
->- `clipBehavior` : `Clip.값` 형태로 사용하며 콘텐츠를 클리핑할지 여부를 결정합니다.
->  - none, hardEdge, antiAlias, antiAliasWithSaveLayer가 값으로 있다.
 
 <br />
 
