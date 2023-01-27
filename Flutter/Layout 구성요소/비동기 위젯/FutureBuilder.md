@@ -62,13 +62,13 @@ Future<int> getNumber() async {
 
 FutureBuilder에서 에러를 반환 받았을 경우에도 `Connection.state` 는 `done` 입니다.
 
-즉 데이터를 성공적으로 받든, 에러를 받든 받기만 하면 `done` 이 되는 것을 알 수 있습니다.
+데이터를 성공적으로 받든, 에러를 받든 받기만 하면 ConnectionState는  `done` 이 되는 것을 알 수 있습니다.
+
+하지만 실제 데이터는 에러를 반환 받으면 `Null` 이 됩니다.
 
 <br />
 
 ## AsyncSnapshot
-
-<br />
 
 ### 속성
 
