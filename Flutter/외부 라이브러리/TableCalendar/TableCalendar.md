@@ -147,5 +147,32 @@ TableCalendar(
 )
 ```
 
-> 위와 같이 작성하면 캘린더에서 사용자가 날짜를 선택하면 포커싱이 바뀌는 것을 확인할 수 있습니다.ㄴ
+> 위와 같이 작성하면 캘린더에서 사용자가 날짜를 선택하면 포커싱이 바뀌는 것을 확인할 수 있습니다.
 
+<br />
+
+## 다국어 사용
+
+TableCalendar 위젯의 기본 언어는 영어입니다.
+
+언어를 한국어로 바꾸기 위해서는 [intl](https://pub.dev/packages/intl) 라이브러리를 pub.dev에서 추가해준 뒤 아래와 같이 작성하면 됩니다.
+
+``` dart
+import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
+
+void main() {
+  initializeDateFormatting().then((_) => runApp(
+    MaterialApp(
+      // ...
+    ),
+  ));
+}
+
+
+TableCalendar(
+  locale: 'ko_KR',
+),
+```
+
+> 무조건 `intl/date_symbol_data_local.dart` 패키지를 import 해야 합니다.
