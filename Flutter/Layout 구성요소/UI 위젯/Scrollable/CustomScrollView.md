@@ -111,6 +111,39 @@ CustomScrollView(
 
 <br />
 
+## SliverToBoxAdapter
+
+일반적인 Container 기반 위젯 중 하나입니다.
+
+CustomScrollView 위젯에 여러 Container 위젯을 표시하는 대신 SliverToBoxAdaptor 위젯을 사용하는 것이 스크롤 뷰의 뷰포트를 통해 실제로 표시되는 자식 위젯만 인스턴스화 하기 때문에 더 효율적입니다.
+
+단일 자식 위젯만 가질 수 있습니다.
+
+``` dart
+SliverToBoxAdapter(
+  child: // 위젯
+)
+```
+
+<br />
+
+## SliverPadding
+
+sliver에 Padding을 적용할 수 있는 위젯
+
+``` dart
+SliverPadding(
+  padding: const EdgeInsets.all(8.0),
+  sliver: SliverToBoxAdapter(
+    child: // 위젯
+  ),
+)
+```
+
+> `sliver`에는 Sliver 관련 위젯을 넣으면 됩니다.
+
+<br />
+
 ## SliverPersistentHeader
 
 - `SliverAppBar` 가 아닌 별도로 헤더를 pin 하거나 float 할 수 있는 위젯
