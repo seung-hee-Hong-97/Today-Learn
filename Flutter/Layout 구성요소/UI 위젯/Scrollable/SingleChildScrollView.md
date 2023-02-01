@@ -22,6 +22,7 @@ SingleChildScrollView(
   physics: NeverScrollableScrollPhysics(),  // 항상 스크롤 허용 X
   physics: BouncingScrollPhysics(),  // IOS의 기본 스크롤처럼 적용 (Android에도 적용하면 IOS처럼 스크롤링 됨)
   physics: ClampingScrollPhysics(),  // Android의 기본 스크롤처럼 적용
+  physics: PageScrollPhysics(),  // 페이지를 넘기듯이 스크롤 할 수 있도록 적용
 )
 ```
 
