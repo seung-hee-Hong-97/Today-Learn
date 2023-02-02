@@ -11,6 +11,7 @@ TextField(
   onChanged: onChanged,  // TextField의 텍스트가 변경 될 때 마다 onChanged 콜백 함수 호출
   expands: bool 타입 값,  // 차지할 수 있는 영역을 TextFiled가 전부 차지할 지에 대한 여부
   maxLines: int 타입 값,  // TextField의 최대 줄 (ex -> 3이면 3줄이 최대)
+  obscureText: bool 타입 값,  // true 이면 비밀번호 입력 필드가 됨
   keyboardType: TextInputType.키보드 타입 값,  // 숫자, 텍스트
   inputFormatters: [FilteringTextInputFormatter.digitsOnly],  // 입력 포맷 설정
   cursorColor: Colors.색상,  // 커서 색상
@@ -18,7 +19,12 @@ TextField(
     border: InputBorder.값,  // TextField 경계선 색
     filled: bool 타입 값,  // 배경색 설정 여부
     fillColor: Colors.색상,  // 배경색
-    hintText: 'dfd',  // 웹의 placeholder와 동일 (도움말 -> 입력 시 사라짐)
+    hintText: 'dfd',  // 웹의 placeholder와 동일 (도움말 -> 입력 시 사라짐),
+    contentPadding: EdgeInsets.all(double 값),  // 입력창 내부 padding
+    enabledBorder: OutlinedBorder(  // 입력창 포커스 되지 않았을 때 경계선
+      // ...
+    ),
+    focusedBorder: // 입력창 포커스 됐을 때 경계선
   ),
 )
 ```
