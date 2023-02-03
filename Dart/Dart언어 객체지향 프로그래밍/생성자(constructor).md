@@ -126,3 +126,112 @@ class Person {
 > 생성자 앞에 `const` 키워드를 붙여 사용할 수 있음
 >
 > 또한 const를 붙여서 인스턴스를 생성하게 되면 파라미터가 동일하다는 가정하에 비교했을 시 일치합니다.
+
+<br />
+
+## Factory Constructor
+
+Flutter에서 Model 클래스를 만들 때 자주 사용됩니다.
+
+싱글톤 패턴을 통해 새로운 인스턴스를 생성하는 것이 아닌 하나의 객체만 사용하는 형태
+
+Factory Constructor를 사용하게 되면 현재 클래스 뿐만 아니라 현재 클래스를 상속하고 있는 클래스도 인스턴스화 해서 반환할 수 있음
+
+```dart
+void main() {
+  final parent = Parent(id: 1);
+  final child = Child(id: 3);
+}
+
+class Parent {
+  final int id;
+  
+  Parent({
+    required this.id,
+  });
+  
+  // factory 생성자 (1)
+  factory Parent.fromInt(int id) {
+    return Parent(id: id);
+  }
+  
+  // factory 생성자 (2)
+  factory Parent.fromInt(int id) {
+    return Child(id: id);
+  }
+}
+
+class Child extends Parent {
+  Child({
+    required super.id,
+  });
+}
+```
+
+> factory 생성자에서 Parent 클래스와 Child 클래스를 모두 반환할 수 있는 것을 확인 했습니다.
+>
+> factory 생성자가 선언된 클래스를 상속한 클래스도 반환할 수 있습니다.
+
+<br />
+
+### fromJson을 통한 데이터 모델링
+
+Flutter에서 Model 클래스를 생성하고 JSON 타입으로 받아온 데이터를 매핑할 때 factory 생성자를 사용하는 방법
+
+`JSON 데이터 예시`
+
+``` json
+[
+  {
+    'id': '1',
+    'name': 'kim',
+    'age': 20,
+  },
+  {
+    'id': '2',
+    'name': 'lee',
+    'age': 24,
+  },
+  {
+    'id': '3',
+    'name': 'park',
+    'age': 32,
+  }
+]
+```
+
+<br />
+
+`factory 생성자 사용한 데이터 모델링`
+
+``` dart
+// 데이터 받아옴
+final item = response.data[index];
+final pItem = PersonModel.fromJson(
+  json: item,
+);
+
+// Model 클래스 및 factory 생성자 적용
+class PersonModel {
+  final String id;
+  final String name;
+  final int age;
+  
+  PersonModel({
+    required this.id,
+    required this.name,
+    required this.age,
+  });
+  
+  factory PersonModel.fromJson({
+    required Map<String, dynamic> json  // json 데이터의 기본 타입
+  }) {
+    return PersonModel(
+      id: json['id'],
+      name: json['name'],
+      age: json['age'],
+    );
+  }
+}
+```
+
