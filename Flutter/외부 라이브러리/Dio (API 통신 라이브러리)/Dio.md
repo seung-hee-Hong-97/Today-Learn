@@ -26,12 +26,10 @@ final response = await Dio().get(URL);
 // 2. Get에 queryParameters 포함
 final response = await Dio().get(URL, queryParameters: {'id': 1, 'name': 'Hong'});
 
-// 3. request 사용
-final response = await Dio().request(
-  URL,
-  data: {'id': 1, 'name': 'Hong'},
-  options: Options(method: 'GET'),
-);
+// 3. options 추가
+final response = await Dio().get(URL, options: Options(
+  headers: {'authorization' : "Bearer $token"},
+));
 
 // 4. POST 사용
 final response = await Dio().post(URL, data: {'id': 1, 'name': 'Hong'});
@@ -102,3 +100,110 @@ class Interceptor {
 > `onResponse` : 응답을 받을 때 실행 될 로직 작성
 >
 > `onError` : 에러를 받을 때 실행 될 로직 작성
+
+<br />
+
+### Interceptor 사용 예시
+
+토큰 유효성 검사 로직
+
+``` dart
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:dio/dio.dart';
+
+class CustomInterceptor extends Interceptor {
+  final FlutterSecureStorage storage;
+  
+  CustomInterceptor({
+    required this.storage,
+  });
+  
+  // 만약 Request의 Header에 accessToken: true 라는 값이 있다면
+  // 실제 accessToken을 storage에서 가져와서 authorization: Bearer $token 으로 헤더 변경
+  @override
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
+    if (options.headers['accessToken'] == 'true') {
+      // 헤더 삭제
+      options.headers.remove('accessToken');
+      
+      final token = await storage.read(key: 'ACCESS_TOKEN');
+      
+      // 실제 storage에 저장된 토큰으로 헤더 변경
+      options.headers.addAll({
+        'authorization': 'Bearer $token',
+      });
+    }
+    
+    // RefreshToken도 위의 AccessToken 로직과 동일
+    if (options.headers['refreshToken'] == 'true') {
+      options.headers.remove('refreshToken');
+      
+      final token = await storage.read(key: 'REFRESH_TOKEN');
+      
+      options.headers.addAll({
+        'authorization': 'Bearer $token',
+      });
+    }
+    
+    return super.onRequest(options, handler);
+  }
+  
+  // 401 에러가 났을 때 (status code)
+  // 토큰을 재발급 받는 시도를 하고 토큰이 재발급 되면 다시 새로운 토큰으로 요청
+  @override
+  void onError(DioError err, ErrorInterceptorHandler handler) async {
+    final refreshToken = await storage.read(key: 'REFRESH_TOKEN');
+    
+    // storage에 저장된 refreshToken이 없다면 에러를 던짐
+    // 에러를 던질 때는 handler.rejrect을 사용
+    if (refreshToken == null) {
+      return handler.reject(err);
+    }
+    
+    // status code가 401인지 여부 확인
+    final isStatus401 = err.response?.statusCode == 401;
+    
+    // 에러가 발생한 요청이 토큰 받급 받으려는 요청인지 여부 확인
+    final isPathRefresh = err.requestOptions.path == '/auth/token';  
+    
+    // 401 에러이고 토큰을 발급 받으려는 요청이 아니라면 해당 조건문 실행
+    if (isStatus401 && !isPathRefresh) {
+      final dio = Dio();
+      
+      try {
+        // refreshToken을 서버로 보내 새로운 accessToken을 발급 받는 시도
+        final response = await dio.post(
+          'http://localhost:3000/auth/token',
+          options: Options(
+            headers: {
+              'authorization': 'Bearer $refreshToken',
+            },
+          ),
+        );
+        
+        final accessToken = response.data['accessToken']; // 위에서 발급받은 accessToken 할당
+        final options = err.requestOptions;  // 에러가 발생한 요청 Options 변수에 할당
+        
+        // 토큰 변경
+        options.headers.addAll({
+          'authorization': 'Bearer $accessToken',
+        });
+        
+        // 서버에서 새로 받아온 accessToken을 storage에 저장하여 accessToken 갱신
+        await storage.write(key: 'ACCESS_TOKEN', value: accessToken);
+        
+        // 에러를 발생시킨 기존 요청에서 토큰만 변경하여 요청 재전송
+        final resp = await dio.fetch(options);
+        
+        // 에러가 발생한 상태여도 요청이 성공 했다는 것을 반환
+        return handler.resolve(resp);
+      } on DioError catch(e) {
+        return handler.reject(e);
+      }
+    }
+    
+    return handler.reject(err);
+  }
+}
+```
+
