@@ -31,24 +31,36 @@ import 'package:json_annotation/json_annotation.dart';
 part 'UserModel.g.dart';
 
 // 변환하려는 클래스 위에 annotation 선언
-@JsonSerializable()
-class UserModel {
+@JsonSerializable(
+  genericArgumentFactories: true,  // 클래스에 Generic 타입을 사용할 경우 true로 설정
+)
+class UserModel<T> {
   final String name;
   final int age;
   final String address;
+  final List<T> mockData;
   
   UseModel({
     required this.name,
     required this.age,
     required this.address,
+    required this.mockData,
   });
   
   // map에서 새로운 User 인스턴스를 생성하기 위해 필요한 factory 생성자입니다.
   // 생성된 `_$UserFromJson()` 생성자에게 map을 전달해줍니다.
   // 생성자의 이름은 클래스의 이름을 따릅니다.
+  
+  // (1) Generic 타입이 없는 경우 factory 생성자 선언 방식
   factory UserModel.fromJson(Map<String, dynamic> json) => _$UserModelFromJson(json);
+  
+  // (2) Generic 타입이 있는 경우 factory 생성자 선언 방식
+  factory UseModel.fromJson(Map<String, dynamic> json, T Function(Object? json) fromJsonT) =>
+    _$UserModelFromJson(json, fromJsonT);
 }
 ```
+
+> Generic 타입에 어떤 타입이 들어올 지, 알수가 없기 때문에 런타임에 factory 생성에 입력하게 되면 빌드 타임 때 알지 못하는 Generic 타입을 Json으로부터 인스턴스화 하는 방법을 주입할 수 있습니다.
 
 <br />
 
