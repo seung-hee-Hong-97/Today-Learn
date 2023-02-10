@@ -57,6 +57,9 @@ class UserModel<T> {
   // (2) Generic 타입이 있는 경우 factory 생성자 선언 방식
   factory UseModel.fromJson(Map<String, dynamic> json, T Function(Object? json) fromJsonT) =>
     _$UserModelFromJson(json, fromJsonT);
+  
+  // (3) 클래스의 인스턴스를 JSON 형태로 변환하는 방식
+  Map<String, dynamic> toJson() => _$UserModelToJson(this);
 }
 ```
 
