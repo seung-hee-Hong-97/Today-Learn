@@ -21,7 +21,7 @@ ListView(
 
 ## builder
 
-- `iteomCount`, `itemBuilder`를 통해 리스트를 구현
+- `itemCount`, `itemBuilder`를 통해 리스트를 구현
 
 - `itemCount`를 통해 전체의 길이를 정의하며, itemBuilder에서 각각의 item을 랜더링
 

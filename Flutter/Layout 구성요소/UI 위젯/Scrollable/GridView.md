@@ -1,5 +1,21 @@
 # GridView
 
+어떤 빌더를 사용하는지에 따라 내부 동작 방식의 차이가 있을 수 있다.
+
+
+
+GridView.count : 화면에 보이지 않는 모든 항목을 전부 그린다.
+
+GridView.builder : 화면에 표시되어야 하는 영역만 그린다.
+
+
+
+https://api.flutter.dev/flutter/rendering/SliverGridDelegate-class.html
+
+[SliverGridDelegateWithFixedCrossAxisCount] : 한 행에 표시되어야 하는 항목의 크기를 고정 
+
+[SliverGridDelegateWithMaxCrossAxisExtent] : 개별 항목의 최대 크기를 지정한다.
+=======
 자식 위젯들의 사이즈와 포지션을 컨트롤하고, `SliverGridDelegateWithFixedCrossAxisCount` 와 `SliverGridDelegateWithMaxCrossAxisExtent` 2가지 종류가 있습니다.
 
 <br />
