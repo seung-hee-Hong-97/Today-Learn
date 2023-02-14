@@ -14,11 +14,13 @@ FutureBuilder와 마찬가지로 최초 렌더링 시에 데이터가 없는 경
 
 ### FutureBuilder와의 차이점
 
-캐싱 기능을 내장하고 있는 것은 동일하나, `StreamBuilder`는 데이터를 받고 있는 중에는 `ConnectionState`가 `active` 상태가 됩니다.
+비동기 데이터를 처리하는 용도로 사용되는 것은 동일하지만, 지속적으로 변경(발행) 되는 값을 처리할 수 있습니다. 
 
-`active` 는 활성화 상태이고 현재 데이터가 Null이 아니며, 시간이 지남에 따라 변경 될 수 있는 상태입니다.
+현제 stream의 상태가 어떤지 확인할 수 있는 ConnectionState 상태를 가지고 stream의 상태를 확인할 수 있습니다. 
 
-즉 비동기 처리에 연결된 상태여서 데이터를 받고 있는 중이라는 의미입니다.
+값이 발행될 때마다 builder가 실행됩니다.  
+
+
 
 <br />
 
@@ -26,9 +28,11 @@ FutureBuilder와 마찬가지로 최초 렌더링 시에 데이터가 없는 경
 
 `Stream` 을 생성하여 listener를 통해 데이터를 다루고, 비동기 처리를 해줍니다.
 
-그리고 Stream의 사용이 끝났으면 `cancel()` 을 통해 Stream을 닫아줘야 합니다.
+stream을 직접 생성하는 경우 해당 stream을 직접 닫지 않는다면 계속해서 stream을 유지하며 메모리 누수를 유발합니다.
 
-하지만 `StreamBuilder` 는 기본적으로 Stream을 닫는 것 까지 내장 되어 있기 때문에 따로 닫는 코드를 작성하지 않아도 됩니다.
+따라서 Stream의 사용이 끝났으면 `cancel()` 을 통해 Stream을 닫아줘야 합니다.
+
+하지만 `StreamBuilder` 는 기본적으로 Stream의 종료까지 관리합니다.
 
 <br />
 
