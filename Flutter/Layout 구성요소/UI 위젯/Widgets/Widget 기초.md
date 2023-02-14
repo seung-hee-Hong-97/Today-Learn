@@ -40,3 +40,21 @@ const 는 컴파일 시점에 정의되며 변경되지 않는다는 의미이�
 
 const로 선언한 위젯은 stateful에 속해있어도 다시 랜더링 되지 않는다.
 
+
+
+## Widget 조건문 활용 
+
+child Widget호출 시 상위에 if문을 명시할 경우 if문에 결과에 따라 해당 위젯의 랜더링이 이루어진다.
+
+```dart
+Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ...,
+          if(isShowButton) // 조건문
+          TextButton(onPressed: onPressed, child: Text("TEXT"))
+        ],
+      )
+    ...
+```
+
