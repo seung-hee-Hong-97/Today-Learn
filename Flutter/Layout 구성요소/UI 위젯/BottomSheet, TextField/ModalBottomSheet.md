@@ -85,18 +85,23 @@ class TestBottomSheet extends StatelessWidget {
     // 시스템적 요소(ex - 키보드)로 인해 발생한 영역 만큼의 값 (double 타입)
     final bottomInset = MediaQuery.of(context).viewInsets.bottom;
 
-    return Container(
-      color: Colors.white,
-      height: MediaQuery.of(context).size.height / 2 + bottomInset,
-      child: Padding(
-        padding: EdgeInsets.only(bottom: bottomInset),
-        child: Column(
-          children: [
-            TextField(),
-          ],
+    return GestureDector(
+      onTap:() {
+        FocusScope.of(context).requestFocus(FocusNode());  // 포커스 된 TextField의 포커스를 없앨 수 있음
+      }
+      child: Container(
+        color: Colors.white,
+        height: MediaQuery.of(context).size.height / 2 + bottomInset,
+        child: Padding(
+          padding: EdgeInsets.only(bottom: bottomInset),
+          child: Column(
+            children: [
+              TextField(),
+            ],
+          ),
         ),
       ),
-    );
+    );  
   }
 }
 ```
