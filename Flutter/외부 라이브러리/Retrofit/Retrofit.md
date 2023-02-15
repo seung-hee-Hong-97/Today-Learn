@@ -77,6 +77,8 @@ abstract class RestClient {
 > `@Path()` : 경로에 추가 될 값을 넣을 때 사용
 >
 > `@Queries()` : queryParameter에 넣을 때 사용
+>
+> `@Body()` :  Body에 넣을 때 사용
 
 <br />
 
