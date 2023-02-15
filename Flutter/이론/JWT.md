@@ -33,3 +33,21 @@ JSON을 Encoding하면 JWT 토큰 형태로 변환됨
 | 자주 노출 되는가? | Header에 Access Token을 실어서 보내기 때문에 자주 노출됨 | 상대적으로 노출이 적음                      |
 | 유효기간은?       | 짧음                                                     | 상대적으로 김                               |
 | 사용 용도는?      | API 요청을 할 때 검증용 토큰으로 사용됨                  | Access Token을 추가적으로 발급 할 때 사용됨 |
+
+<br />
+
+## Flutter에서 토큰 Encode
+
+```dart
+import 'dart:convert';
+
+final exampleString = 'test@example.ai:testtest';
+
+Codec<S, T> stringToBase64 = utf8.fuse('T에 입력한 타입 값');
+
+String token = stringToBase64.encode(exampleString);
+```
+
+> `S` : Encode하기 위해 넣어줄 값의 타입
+>
+> `T` : 반환 받을 값의 타입
