@@ -40,12 +40,28 @@ class UserModel<T> {
   final String address;
   final List<T> mockData;
   
-  UseModel({
+  UserModel({
     required this.name,
     required this.age,
     required this.address,
     required this.mockData,
   });
+  
+  // 클래스의 특정 속성값만 바꾸고 싶을 경우 copyWith을 정의하여 사용할 수 있습니다.
+  // null을 허용할 수 있도록 ?를 붙혀주고, copyWith을 사용하여 특정 값을 바꾼 경우 해당 값만 변경됩니다.
+  UserModel copyWith({
+    String? name,
+    int? age,
+    String? address,
+    List<T>? mockData,
+  }) {
+    return UserModel(
+      name: name ?? this.name,
+      age: age ?? this.age,
+      address: address ?? this.address,
+      mockData: mockData ?? this.mockData,
+    );
+  }
   
   // map에서 새로운 User 인스턴스를 생성하기 위해 필요한 factory 생성자입니다.
   // 생성된 `_$UserFromJson()` 생성자에게 map을 전달해줍니다.
