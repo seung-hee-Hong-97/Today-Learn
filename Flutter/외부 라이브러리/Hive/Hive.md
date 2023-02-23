@@ -57,7 +57,7 @@ final box = Hive.box<E>('Box 이름');
 
 <br />
 
-### get (read)
+### get
 
 ``` dart
 // 파라미터로 넣은 key에 해당하는 value를 가져옴
@@ -65,13 +65,7 @@ box.get(key);
 
 // 파라미터로 넣은 index에 해당하는 value를 가져옴
 box.getAt(index);
-
-// 만약 존재하지 않은 데이터를 get 할 때는 null을 리턴
-// defaultValue를 사용해서 기본값을 설정할 수 있음
-box.get(key, defaultValue: value);
 ```
-
-> key에 해당하는 value가 없을 경우, defaultValue에 해당하는 Value를 가져옴
 
 <br />
 
@@ -84,7 +78,7 @@ box.add(value);
 
 <br />
 
-### put (write)
+### put
 
 ```dart
 // key - value를 파라미터로 넣음
