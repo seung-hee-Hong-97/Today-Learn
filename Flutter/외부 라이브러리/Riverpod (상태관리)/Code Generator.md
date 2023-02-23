@@ -38,7 +38,7 @@ dev_dependencies:
 Code Generator를 통해 Provider를 자동 생성하려는 파일에 `path '파일명.g.dart'` 를 명시하고 `flutter pub run build_runner build` 를 해줘야 함
 
 ``` dart
-path '파일명.g.dart';
+part '파일명.g.dart';
 ```
 
 ```bash
