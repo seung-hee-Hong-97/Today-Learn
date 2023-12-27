@@ -326,18 +326,33 @@ class Logger extends ProviderObserver {
     ProviderBase provider, 
     Object? previousValue, 
     Object? newValue, 
-    ProviderContainer container) {
-    
+    ProviderContainer container,
+  ) {
+    // Code...
+    // Example Code
+    if (newValue is AsyncError) {
+      Logger().e(newValue.error, stackTrace: newValue.stackTrace);
+    }
   }
   
   @override
   void didAddProvider(ProviderBase provider, Object? value, ProviderContainer container) {
-    
+    // Code...
   }
   
   @override
   void didDisposeProvider(ProviderBase provider, ProviderContainer container) {
-    
+    // Code...
+  }
+  
+  @override
+  void providerDidFail(
+    ProviderBase provider,
+    Object error,
+    StackTrace stackTrace,
+    ProviderContainer container,
+  ) {
+    // Code...
   }
 }
 ```
@@ -347,6 +362,8 @@ class Logger extends ProviderObserver {
 > `didAddProvider` : provider가 초기화 될 때 마다 호출됩니다. provider의 value를 파라미터로 받습니다.
 >
 > `didDisposeProvider` : provider가 dispose(해제) 될 때 마다 호출됩니다. 
+>
+> `providerDidFail` : provider가 초기화 중에 에러를 throw하거나 Future/Stream에서 오류를 내보내는 방식으로 오류를 내보낼 때 호출됩니다.
 
 
 
