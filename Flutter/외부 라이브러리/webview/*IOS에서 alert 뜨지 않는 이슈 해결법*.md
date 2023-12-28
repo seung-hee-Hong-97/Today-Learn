@@ -66,24 +66,3 @@ UIAlertController *alertController = [UIAlertController alertControllerWithTitle
 3. 해당 코드는 Pods 하위에 있기 때문에 `ios/.gitignore` 파일에 포함되어 있어 Git에 올리지 못하여 형상관리를 할 수 없습니다.
 
 4. 배포 및 라이브러리 업데이트를 할 때 위의 코드가 반영이 되었는지 확인해야 합니다.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
